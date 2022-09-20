@@ -1,28 +1,2332 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <title>DOM traversing: parents list</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.5.2 (Linux)"/>
+	<meta name="created" content="2022-09-20T11:23:39.686678195"/>
+	<meta name="changed" content="2022-09-20T11:24:53.131405622"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		td p { orphans: 0; widows: 0; background: transparent }
+	</style>
 </head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0in">
+<br/>
 
-<body>
-    <main class="page">
-        <section>
-            <blockquote class="quote">
-                <p class="quote-text">
-                    &quot;Begin at the beginning,&quot; the King said, very gravely, &quot;and go on till you come to the end: then
-                    stop.&quot;
-                </p>
-                <footer class="quote-footer">
-                    ― Lewis Carroll, <cite>Alice in Wonderland</cite>
-                </footer>
-            </blockquote>
-        </section>
-    </main>
+</p>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!DOCTYPE HTML&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;html&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;head&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;title&gt;Story by
+			HTML5 UP&lt;/title&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;meta charset=&quot;utf-8&quot;
+			/&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;meta name=&quot;viewport&quot;
+			content=&quot;width=device-width, initial-scale=1,
+			user-scalable=no&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;link rel=&quot;stylesheet&quot;
+			href=&quot;assets/css/main.css&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;noscript&gt;&lt;link
+			rel=&quot;stylesheet&quot; href=&quot;assets/css/noscript.css&quot;
+			/&gt;&lt;/noscript&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/head&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;body
+			class=&quot;is-preload&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Wrapper --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div id=&quot;wrapper&quot;
+			class=&quot;divided&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- One --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section class=&quot;banner
+			style1 orient-left content-align-left image-position-right
+			fullscreen onload-image-fade-in onload-content-fade-right&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;content&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h1&gt;Story&lt;/h1&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p class=&quot;major&quot;&gt;A
+			(modular, highly tweakable) responsive one-page template designed
+			by &lt;a href=&quot;https://html5up.net&quot;&gt;HTML5 UP&lt;/a&gt;
+			and released for free under the &lt;a
+			href=&quot;https://html5up.net/license&quot;&gt;Creative
+			Commons&lt;/a&gt;.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			stacked&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a
+			href=&quot;#first&quot; class=&quot;button big wide
+			smooth-scroll-middle&quot;&gt;Get Started&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/banner.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Two --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;spotlight style1 orient-right content-align-left
+			image-position-center onscroll-image-fade-in&quot; id=&quot;first&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;content&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Magna etiam
+			feugiat&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex
+			pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla
+			eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra
+			pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit
+			amet.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			stacked&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;button&quot;&gt;Learn More&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/spotlight01.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Three --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;spotlight style1 orient-left content-align-left
+			image-position-center onscroll-image-fade-in&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;content&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Tempus
+			adipiscing&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex
+			pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla
+			eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra
+			pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit
+			amet.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			stacked&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;button&quot;&gt;Learn More&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/spotlight02.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Four --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;spotlight style1 orient-right content-align-left
+			image-position-center onscroll-image-fade-in&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;content&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Pharetra etiam
+			nulla&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex
+			pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla
+			eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra
+			pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit
+			amet.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			stacked&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;button&quot;&gt;Learn More&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/spotlight03.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Five --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;wrapper style1 align-center&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;inner&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Massa sed
+			condimentum&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex
+			pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla
+			eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra
+			pretium massa et, hendrerit vestibulum odio lorem ipsum.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Gallery --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;gallery
+			style2 medium lightbox onscroll-fade-in&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/01.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/01.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ipsum
+			Dolor&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/02.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/02.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Feugiat
+			Lorem&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/03.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/03.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Magna Amet&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/04.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/04.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Sed Tempus&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/05.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/05.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ultrices
+			Magna&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/06.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/06.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Sed Tempus&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/07.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/07.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ipsum
+			Lorem&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/08.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/08.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Magna
+			Risus&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/09.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/09.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Tempus
+			Dolor&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/10.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/10.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Sed Etiam&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/11.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/11.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Magna
+			Lorem&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;a
+			href=&quot;images/gallery/fulls/12.jpg&quot; class=&quot;image&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;img
+			src=&quot;images/gallery/thumbs/12.jpg&quot; alt=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/a&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;caption&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ipsum
+			Dolor&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor amet, consectetur magna etiam elit. Etiam sed ultrices.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			fixed&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;span
+			class=&quot;button small&quot;&gt;Details&lt;/span&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/article&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Six --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;wrapper style1 align-center&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;inner&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Ipsum sed
+			consequat&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex
+			pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla
+			eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra
+			pretium massa et, hendrerit vestibulum odio lorem ipsum.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;items
+			style1 medium onscroll-fade-in&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			style2 major fa-gem&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Lorem&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-save&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ipsum&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-chart-bar&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Dolor&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-wifi&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Amet&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-cog&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Magna&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			style2 major fa-paper-plane&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Tempus&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-desktop&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Aliquam&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-sync-alt&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Elit&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-hashtag&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Morbi&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-bolt&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Turpis&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-envelope&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Ultrices&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;span class=&quot;icon
+			solid style2 major fa-leaf&quot;&gt;&lt;/span&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h3&gt;Risus&lt;/h3&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;Lorem ipsum
+			dolor sit amet, consectetur adipiscing elit. Morbi dui turpis,
+			cursus eget orci amet aliquam congue semper. Etiam eget ultrices
+			risus nec tempor elit.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Seven --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;section
+			class=&quot;wrapper style1 align-center&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;inner
+			medium&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;h2&gt;Get in
+			touch&lt;/h2&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;form method=&quot;post&quot;
+			action=&quot;#&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;fields&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;field
+			half&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;label
+			for=&quot;name&quot;&gt;Name&lt;/label&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;input type=&quot;text&quot;
+			name=&quot;name&quot; id=&quot;name&quot; value=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;field
+			half&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;label
+			for=&quot;email&quot;&gt;Email&lt;/label&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;input type=&quot;email&quot;
+			name=&quot;email&quot; id=&quot;email&quot; value=&quot;&quot; /&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;field&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;label
+			for=&quot;message&quot;&gt;Message&lt;/label&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;textarea
+			name=&quot;message&quot; id=&quot;message&quot;
+			rows=&quot;6&quot;&gt;&lt;/textarea&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;actions
+			special&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;input
+			type=&quot;submit&quot; name=&quot;submit&quot; id=&quot;submit&quot;
+			value=&quot;Send Message&quot; /&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/form&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/section&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Footer --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;footer class=&quot;wrapper
+			style1 align-center&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;div class=&quot;inner&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;ul class=&quot;icons&quot;&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;icon brands style2 fa-twitter&quot;&gt;&lt;span
+			class=&quot;label&quot;&gt;Twitter&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;icon brands style2 fa-facebook-f&quot;&gt;&lt;span
+			class=&quot;label&quot;&gt;Facebook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;icon brands style2 fa-instagram&quot;&gt;&lt;span
+			class=&quot;label&quot;&gt;Instagram&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;icon brands style2 fa-linkedin-in&quot;&gt;&lt;span
+			class=&quot;label&quot;&gt;LinkedIn&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;li&gt;&lt;a href=&quot;#&quot;
+			class=&quot;icon style2 fa-envelope&quot;&gt;&lt;span
+			class=&quot;label&quot;&gt;Email&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/ul&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;p&gt;&amp;copy;
+			Untitled. Design: &lt;a href=&quot;https://html5up.net&quot;&gt;HTML5
+			UP&lt;/a&gt;.&lt;/p&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/footer&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/div&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;!-- Scripts --&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/jquery.min.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/jquery.scrollex.min.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/jquery.scrolly.min.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/browser.min.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/breakpoints.min.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/util.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;assets/js/main.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"></td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;script
+			src=&quot;index.js&quot;&gt;&lt;/script&gt;</p>
+		</td>
+	</tr>
+</table>
+<table cellpadding="2" cellspacing="2">
+	<tr>
+		<td style="border: none; padding: 0in"><p>&lt;/body&gt;</p>
+		</td>
+	</tr>
+</table>
+<p>&lt;/html&gt;</p>
 </body>
-
 </html>
